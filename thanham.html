@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Thanh âm của con — Premium</title>
+  <meta name="description" content="Podcast cảm xúc — thiết kế theo phong cách Spotify Premium." />
+<link rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap">
+
+  <link rel="stylesheet" crossorigin href="/assets/style-HhoqGdiY.css">
+</head>
+
+<body class="theme-audio antialiased text-textmain">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-white/70 h-[78px] flex items-center px-6 md:px-10 border-b border-bordermuted shadow-sm">
+    <a href="index.html" class="text-[18px] md:text-[20px] font-semibold select-none">
+      KHOẢNH KHẮC THẤU HIỂU
+    </a>
+
+    <nav class="hidden md:flex ml-auto items-center gap-6">
+      <a href="index.html" class="nav-link">Trang chủ</a>
+      <a href="chuyen.html" class="nav-link">Chuyện của con</a>
+      <a href="thanham.html" class="nav-link-active">Thanh âm của con</a>
+      <a href="hoiam.html" class="nav-link">Hồi âm</a>
+    </nav>
+
+    <button id="mobileMenuBtn" class="md:hidden ml-auto text-2xl text-textmain">☰</button>
+  </header>
+
+  <!-- MOBILE DRAWER -->
+  <div id="mobileDrawer" class="hidden fixed inset-0 bg-black/40 z-50">
+    <div class="drawer-panel">
+      <button id="drawerClose" class="self-end text-2xl text-textmain">✕</button>
+      <a href="index.html" class="drawer-link">Trang chủ</a>
+      <a href="chuyen.html" class="drawer-link">Chuyện của con</a>
+      <a href="thanham.html" class="drawer-link">Thanh âm của con</a>
+      <a href="hoiam.html" class="drawer-link">Hồi âm</a>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <main class="max-w-[900px] mx-auto px-6 md:px-8 py-12">
+
+    <header class="mb-8">
+      <h1 class="text-3xl font-serif font-semibold">Thanh âm của con</h1>
+      <p class="text-textmuted mt-2">Những tâm sự, cảm xúc — được kể bằng âm thanh.</p>
+    </header>
+
+    <!-- AUDIO LIST (Spotify Premium Cards) -->
+    <section class="space-y-6">
+
+      <!-- Podcast 1 -->
+      <article class="spotify-card premium-card" data-index="0">
+        <div class="premium-thumb" data-thumb></div>
+        <div class="flex-1">
+          <h3 class="premium-title">Podcast #1 — Miền nhớ</h3>
+          <p class="premium-sub">Một chút hoài niệm, một chút dịu dàng…</p>
+          <div class="premium-wave"></div>
+          <audio src="/assets/audio/Podcast1.m4a"></audio>
+        </div>
+      </article>
+
+      <!-- Podcast 2 -->
+      <article class="spotify-card premium-card" data-index="1">
+        <div class="premium-thumb" data-thumb></div>
+        <div class="flex-1">
+          <h3 class="premium-title">Podcast #2 — Khoảng lặng</h3>
+          <p class="premium-sub">Khi lòng muốn được nghỉ ngơi.</p>
+          <div class="premium-wave"></div>
+          <audio src="/assets/audio/Podcast2.mp3"></audio>
+        </div>
+      </article>
+
+      <!-- Podcast 3 -->
+      <article class="spotify-card premium-card" data-index="2">
+        <div class="premium-thumb" data-thumb></div>
+        <div class="flex-1">
+          <h3 class="premium-title">Podcast #3 — Phía sau nỗi buồn</h3>
+          <p class="premium-sub">Ở cuối con đường là ánh sáng.</p>
+          <div class="premium-wave"></div>
+          <audio src="/assets/audio/Podcast3.m4a"></audio>
+        </div>
+      </article>
+
+      <!-- Podcast 4 -->
+      <article class="spotify-card premium-card" data-index="3">
+        <div class="premium-thumb" data-thumb></div>
+        <div class="flex-1">
+          <h3 class="premium-title">Podcast #4 — Dòng suy tư</h3>
+          <p class="premium-sub">Những lời tự sự ta chưa từng nói ra.</p>
+          <div class="premium-wave"></div>
+          <audio src="/assets/audio/Podcast4.m4a"></audio>
+        </div>
+      </article>
+
+      <!-- Podcast 5 -->
+      <article class="spotify-card premium-card" data-index="4">
+        <div class="premium-thumb" data-thumb></div>
+        <div class="flex-1">
+          <h3 class="premium-title">Podcast #5 — Chạm vào thanh xuân</h3>
+          <p class="premium-sub">Một tuổi trẻ đẹp đến xuyến xao.</p>
+          <div class="premium-wave"></div>
+          <audio src="/assets/audio/Podcast5.m4a"></audio>
+        </div>
+      </article>
+
+    </section>
+
+    <footer class="mt-10 text-sm text-textmuted">
+      <a href="index.html">← Trở về Trang chủ</a>
+    </footer>
+  </main>
+
+  <!-- MINI PLAYER -->
+  <div id="miniPlayer" class="flex">
+    <img id="miniThumb">
+    <div id="miniInfo">
+      <div id="miniTitle"></div>
+      <div id="miniBar"><div id="miniProgress"></div></div>
+    </div>
+    <div id="miniControls" class="flex items-center gap-4 ml-3">
+      <button id="miniPrev" class="mini-ctrl">⏮</button>
+      <button id="miniPlayBtn" class="mini-ctrl text-3xl">⏸</button>
+      <button id="miniNext" class="mini-ctrl">⏭</button>
+    </div>
+  </div>
+
+  <!-- EXPANDED PLAYER (Fullscreen Spotify View) -->
+  <div id="expandPlayer" class="hidden fixed inset-0 bg-white/95 backdrop-blur-xl z-50 flex flex-col p-6">
+    <button id="expandClose" class="text-3xl absolute top-5 right-6">✕</button>
+
+    <div id="expandThumb"></div>
+
+    <div class="mt-8 text-center">
+      <h2 id="expandTitle" class="text-[26px] font-semibold"></h2>
+      <p id="expandSub" class="text-textmuted mt-1"></p>
+    </div>
+
+    <div class="mt-10">
+      <div id="expandBar"><div id="expandProgress"></div></div>
+    </div>
+
+    <div class="expand-controls flex items-center justify-center gap-10 mt-10">
+      <button id="expandPrev" class="text-3xl">⏮</button>
+      <button id="expandPlay" class="text-4xl">⏸</button>
+      <button id="expandNext" class="text-3xl">⏭</button>
+    </div>
+  </div>
+
+  <script src="./js/audio.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
