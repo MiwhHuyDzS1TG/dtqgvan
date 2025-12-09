@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hồi âm của cha mẹ</title>
+  <meta name="description" content="Góc để phụ huynh viết thư gửi con." />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap">
+
+
+  <script type="module" crossorigin src="./assets/form-Bfsi7gnG.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/form-HhoqGdiY.css">
+</head>
+
+<body class="antialiased bg-white text-textmain">
+
+  <!-- ======================================================
+       HEADER
+  ====================================================== -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-white/60 h-[78px] flex items-center px-6 md:px-10 border-b border-bordermuted">
+    <a href="index.html" class="text-[18px] md:text-[20px] font-semibold select-none">KHOẢNH KHẮC THẤU HIỂU</a>
+
+    <nav class="hidden md:flex ml-auto items-center gap-6">
+      <a href="index.html" class="nav-link">Trang chủ</a>
+      <a href="chuyen.html" class="nav-link">Chuyện của con</a>
+      <a href="thanham.html" class="nav-link">Thanh âm của con</a>
+      <a href="hoiam.html" class="nav-link-active">Hồi âm</a>
+    </nav>
+
+    <button id="mobileMenuBtn" class="md:hidden ml-auto text-2xl text-textmain">☰</button>
+  </header>
+
+
+  <!-- MOBILE DRAWER -->
+  <div id="mobileDrawer" class="hidden fixed inset-0 bg-black/40 z-50">
+    <div class="drawer-panel">
+      <button id="drawerClose" class="self-end text-2xl text-textmain mb-4">✕</button>
+
+      <a href="index.html" class="drawer-link">Trang chủ</a>
+      <a href="chuyen.html" class="drawer-link">Chuyện của con</a>
+      <a href="thanham.html" class="drawer-link">Thanh âm của con</a>
+      <a href="hoiam.html" class="drawer-link">Hồi âm</a>
+    </div>
+  </div>
+
+
+  <!-- ======================================================
+       MAIN
+  ====================================================== -->
+  <main class="max-w-[900px] mx-auto px-6 md:px-8 py-12 relative">
+
+
+    <header class="mb-6">
+      <h1 class="text-3xl font-serif font-semibold">Hồi âm của cha mẹ</h1>
+      <p class="text-textmuted mt-2">Một góc dành cho phụ huynh — viết thư, chia sẻ, gửi gắm.</p>
+    </header>
+
+    <!-- ======================================================
+        FORM "TỜ GIẤY"
+    ====================================================== -->
+    <section class="bg-vang-light p-6 rounded-2xl shadow-frame paper-float">
+      <form id="parentForm" class="flex flex-col gap-4 relative">
+
+        <label class="block">
+          <span class="text-textmuted text-sm">Họ tên (tùy chọn)</span>
+          <input name="name" class="mt-2 w-full p-3 rounded-lg border border-bordermuted" />
+        </label>
+
+        <label class="block">
+          <span class="text-textmuted text-sm">Email (tùy chọn)</span>
+          <input name="email" type="email" class="mt-2 w-full p-3 rounded-lg border border-bordermuted" />
+        </label>
+
+        <label class="block">
+          <span class="text-textmuted text-sm">Thư gửi con</span>
+
+          <textarea name="message" rows="8" required maxlength="2000"
+            class="mt-2 w-full p-3 rounded-lg border border-bordermuted"></textarea>
+
+          <div class="text-sm text-textmuted mt-1">
+            Ký tự: <span id="charcount">0</span>/2000
+          </div>
+
+          <!-- Preview thư (không hiệu ứng handwriting nữa) -->
+          <div id="handPreview"
+               class="mt-4 p-4 rounded-xl border border-bordermuted/30 bg-white/60
+                      italic text-[15px] leading-relaxed min-h-[80px] shadow-inner">
+            (Nội dung thư sẽ hiển thị tại đây…)
+          </div>
+
+        </label>
+
+        <label class="flex items-center gap-2 text-sm">
+          <input type="checkbox" name="publish" />
+          Đồng ý cho hiển thị (ẩn danh)
+        </label>
+
+        <div class="flex gap-3 mt-2">
+          <button type="submit" id="submitBtn" class="btn-premium">Gửi thư</button>
+          <button type="button" id="saveDraft" class="px-4 py-2 rounded-lg border">💾 Lưu nháp</button>
+        </div>
+      </form>
+    </section>
+
+    <footer class="mt-8 text-sm text-textmuted">
+      <a href="index.html">← Trở về Trang chủ</a>
+    </footer>
+
+  </main>
+
+
+  <!-- SUCCESS POPUP -->
+  <div id="successPopup"
+       class="fixed bottom-6 left-1/2 -translate-x-1/2 px-5 py-3 rounded-xl bg-black/80 text-white text-sm opacity-0 transition-all duration-500">
+    ✔ Thư đã được gửi!
+  </div>
+
+
+
+</body>
+</html>
